@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="mlmoviesdb" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="OWv-Au-F2N" id="6nF-iP-fXn"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -24,12 +25,20 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OWv-Au-F2N">
+                    <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="OWv-Au-F2N" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Hh7-tr-7eE"/>
                 <constraint firstItem="4Sn-D3-bdW" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Pi3-sV-Wbj"/>
+                <constraint firstAttribute="bottom" secondItem="OWv-Au-F2N" secondAttribute="bottom" id="Sy1-Up-lFc"/>
                 <constraint firstItem="4Sn-D3-bdW" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="TQs-CT-Whc"/>
+                <constraint firstItem="OWv-Au-F2N" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="sMa-Br-NeK"/>
+                <constraint firstItem="OWv-Au-F2N" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="wy6-FK-HSA"/>
             </constraints>
             <point key="canvasLocation" x="130.53435114503816" y="-11.267605633802818"/>
         </view>
