@@ -24,8 +24,16 @@ class MainViewController: UIViewController {
     func configView() {
 
         self.title = "ML Movies"
-        self.view.backgroundColor = .red
+        self.view.backgroundColor = .cyan
 
         setupTableView()
+    }
+
+    /// Async Await version
+    override func viewDidAppear(_ animated: Bool) {
+
+        Task {
+            await viewModel.fetchData()
+        }
     }
 }
