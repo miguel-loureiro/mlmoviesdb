@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="mlmoviesdb" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="Tz6-IY-O66" id="UMe-Vi-oIP"/>
                 <outlet property="tableView" destination="OWv-Au-F2N" id="6nF-iP-fXn"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -29,6 +31,10 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="793"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Tz6-IY-O66">
+                    <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                    <color key="color" systemColor="systemGray2Color"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -37,8 +43,10 @@
                 <constraint firstItem="4Sn-D3-bdW" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Pi3-sV-Wbj"/>
                 <constraint firstAttribute="bottom" secondItem="OWv-Au-F2N" secondAttribute="bottom" id="Sy1-Up-lFc"/>
                 <constraint firstItem="4Sn-D3-bdW" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="TQs-CT-Whc"/>
+                <constraint firstItem="Tz6-IY-O66" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="lzS-wo-owS"/>
                 <constraint firstItem="OWv-Au-F2N" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="sMa-Br-NeK"/>
                 <constraint firstItem="OWv-Au-F2N" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="wy6-FK-HSA"/>
+                <constraint firstItem="Tz6-IY-O66" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="yQM-tH-Pa7"/>
             </constraints>
             <point key="canvasLocation" x="130.53435114503816" y="-11.267605633802818"/>
         </view>
@@ -46,6 +54,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

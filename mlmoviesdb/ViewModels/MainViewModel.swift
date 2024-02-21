@@ -8,7 +8,11 @@
 import Foundation
 
 class MainViewModel {
-    
+
+    var isLoading: Observable<Bool> = Observable(false)
+    var cellDataSource: Observable<[Movie]> = Observable(nil)
+    var dataSource: TrendingMovieModel?
+
     func numberOfSections() -> Int {
         
         1
@@ -16,16 +20,26 @@ class MainViewModel {
     
     func numberOfRows(in section: Int) -> Int {
         
-        5
+        return self.dataSource?.results.count ?? 0
     }
     
-    func fetchData() async {
-        
+    func getData() async {
+
+        if isLoading.value ?? true {
+
+            return
+        }
+
+        isLoading.value = true
+
         do {
-            let trendingMovies = try await APICaller.getTrendingMovies()
+            let data = try await APICaller.getTrendingMovies()
+            self.isLoading.value = false
             // Handle successful result here (e.g., update the UI, store data, etc.)
-            print("* Original tilte of movie -> \(trendingMovies.results[0].originalTitle!)")
-            
+            print("* Top trending counts: \(data.results.count)")
+            self.dataSource = data
+            self.mapCellData()
+
         } catch {
             // Handle error here (e.g., show an alert)
             if let networkError = error as? NetworkError {
@@ -35,6 +49,16 @@ class MainViewModel {
             }
             
         }
+    }
+
+    func mapCellData() {
+
+        self.cellDataSource.value = self.dataSource?.results ?? []
+    }
+
+    func getMovieTitle(_ movie: Movie) -> String {
+
+        return movie.title ?? movie.name ?? ""
     }
 }
 
