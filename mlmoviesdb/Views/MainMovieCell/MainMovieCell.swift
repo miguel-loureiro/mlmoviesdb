@@ -39,9 +39,8 @@ class MainMovieCell: UITableViewCell {
         // Initialization code
         backView.addBorder(color: .label, width: 1.0)
         backView.round()
-
+        backView.backgroundColor = .lightGray
         movieImageView.round(5.0)
-        movieImageView.contentMode = .scaleAspectFit
     }
 
 

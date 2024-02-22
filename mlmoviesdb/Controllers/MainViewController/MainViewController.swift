@@ -42,7 +42,7 @@ class MainViewController: UIViewController {
     func configView() {
 
         self.title = "ML Movies"
-        self.view.backgroundColor = .cyan
+        self.view.backgroundColor = .systemBackground
 
         setupTableView()
     }

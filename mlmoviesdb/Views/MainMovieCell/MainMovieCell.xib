@@ -21,7 +21,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hkV-d1-ncL">
                         <rect key="frame" x="16" y="8" width="314" height="147"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movie-850" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GAI-En-Ntv">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movie-850" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GAI-En-Ntv">
                                 <rect key="frame" x="8" y="5" width="104.33333333333333" height="137"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="GAI-En-Ntv" secondAttribute="height" multiplier="92:121" id="qna-Uw-LSc"/>
