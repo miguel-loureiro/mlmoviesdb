@@ -12,7 +12,6 @@ class MainViewController: UIViewController {
 
     // MARK: IBOutlets
     @IBOutlet weak var tableView: UITableView!
-
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
     // MARK: ViewModels
@@ -41,7 +40,7 @@ class MainViewController: UIViewController {
 
     func configView() {
 
-        self.title = "ML Movies"
+        self.title = " - Trending movies -"
         self.view.backgroundColor = .systemBackground
 
         setupTableView()
@@ -78,6 +77,19 @@ class MainViewController: UIViewController {
             self.cellDataSource = movies
             self.reloadTableView()
 
+        }
+    }
+
+    func openDetail(movieId: Int) {
+
+        guard let movie = viewModel.retrieveMovie(with: movieId) else { return }
+
+        let detailViewModel = MovieDetailsViewModel(movie: movie)
+        let detailsController = MovieDetailsViewController(viewModel: detailViewModel)
+
+        DispatchQueue.main.async {
+
+            self.navigationController?.pushViewController(detailsController, animated: true)
         }
     }
 }

@@ -24,16 +24,11 @@ class MainMovieCell: UITableViewCell {
 
     ///IBOutlets
     @IBOutlet weak var backView: UIView!
-
     @IBOutlet weak var movieImageView: UIImageView!
-    
     @IBOutlet weak var nameLabel: UILabel!
-    
     @IBOutlet weak var dateLabel: UILabel!
-    
     @IBOutlet weak var rateLabel: UILabel!
     
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -42,7 +37,6 @@ class MainMovieCell: UITableViewCell {
         backView.backgroundColor = .lightGray
         movieImageView.round(5.0)
     }
-
 
     func setupCell(viewModel: MovieTableCellViewModel) {
 

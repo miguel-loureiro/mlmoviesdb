@@ -29,6 +29,9 @@
 		27A64A192B86D07900C18F36 /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A64A182B86D07900C18F36 /* ImageFetcher.swift */; };
 		27A64A1B2B86D11A00C18F36 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A64A1A2B86D11A00C18F36 /* URLSessionProtocol.swift */; };
 		27A64A1D2B86D15D00C18F36 /* CachedDefaultConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A64A1C2B86D15D00C18F36 /* CachedDefaultConfig.swift */; };
+		27A64A252B879C4300C18F36 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A64A232B879C4300C18F36 /* MovieDetailsViewController.swift */; };
+		27A64A262B879C4300C18F36 /* MovieDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27A64A242B879C4300C18F36 /* MovieDetailsViewController.xib */; };
+		27A64A282B87C81000C18F36 /* MovieDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A64A272B87C81000C18F36 /* MovieDetailsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +78,9 @@
 		27A64A182B86D07900C18F36 /* ImageFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFetcher.swift; sourceTree = "<group>"; };
 		27A64A1A2B86D11A00C18F36 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
 		27A64A1C2B86D15D00C18F36 /* CachedDefaultConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedDefaultConfig.swift; sourceTree = "<group>"; };
+		27A64A232B879C4300C18F36 /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
+		27A64A242B879C4300C18F36 /* MovieDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailsViewController.xib; sourceTree = "<group>"; };
+		27A64A272B87C81000C18F36 /* MovieDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +185,7 @@
 		275119AF2B3EF26F00C25CA3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				27A64A222B879BC700C18F36 /* MovieDetailsViewController */,
 				275119A92B3EE29400C25CA3 /* MainViewController */,
 			);
 			path = Controllers;
@@ -206,6 +213,7 @@
 			children = (
 				275119B82B3F15CC00C25CA3 /* MainViewModel.swift */,
 				27A64A082B866EF800C18F36 /* MovieTableCellViewModel.swift */,
+				27A64A272B87C81000C18F36 /* MovieDetailsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -260,6 +268,15 @@
 				27A64A182B86D07900C18F36 /* ImageFetcher.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		27A64A222B879BC700C18F36 /* MovieDetailsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				27A64A232B879C4300C18F36 /* MovieDetailsViewController.swift */,
+				27A64A242B879C4300C18F36 /* MovieDetailsViewController.xib */,
+			);
+			path = MovieDetailsViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -375,6 +392,7 @@
 				275119AD2B3EE2D400C25CA3 /* MainViewController.xib in Resources */,
 				275119832B3ED80F00C25CA3 /* Assets.xcassets in Resources */,
 				27A64A052B8653C700C18F36 /* MainMovieCell.xib in Resources */,
+				27A64A262B879C4300C18F36 /* MovieDetailsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +417,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27A64A252B879C4300C18F36 /* MovieDetailsViewController.swift in Sources */,
 				27A64A1D2B86D15D00C18F36 /* CachedDefaultConfig.swift in Sources */,
 				27A64A1B2B86D11A00C18F36 /* URLSessionProtocol.swift in Sources */,
 				275119AC2B3EE2D400C25CA3 /* MainViewController.swift in Sources */,
@@ -407,6 +426,7 @@
 				275119BD2B4024D500C25CA3 /* APICaller.swift in Sources */,
 				275119B72B3EFAF100C25CA3 /* MainViewController+TableView.swift in Sources */,
 				2784AD6C2B4CCD3600084FBE /* Observable.swift in Sources */,
+				27A64A282B87C81000C18F36 /* MovieDetailsViewModel.swift in Sources */,
 				27A64A042B8653C700C18F36 /* MainMovieCell.swift in Sources */,
 				27A64A192B86D07900C18F36 /* ImageFetcher.swift in Sources */,
 				275119BB2B40243E00C25CA3 /* NetworkConstant.swift in Sources */,
